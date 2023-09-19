@@ -1,4 +1,5 @@
 import os
+import subprocess
 from datetime import datetime, timedelta
 # timedelta allows easier time calculations than pulling from the timestamp manually
 
@@ -29,7 +30,10 @@ def summarize():
     with open('summaries.txt', 'a') as f:
         f.write(f"{formatted_now} - {summary_text}\n")
 
-    os.remove('timestamps.txt')
+    os.remove('timestamps.txt') # Deletes the timestamps file to reset for next usage
+
+    subprocess.run("notepad.exe summaries.txt")
+
 
 
 summarize()

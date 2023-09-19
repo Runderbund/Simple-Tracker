@@ -1,6 +1,9 @@
 start_timer.bat
 stop_timer.bat
 summarize_timer.bat
+start_timer.vbs
+stop_timer.vbs
+summarize_timer.vbs
 timestamps.txt
 summaries.txt
 
