@@ -1,6 +1,8 @@
 start_timer.bat
 stop_timer.bat
 summarize_timer.bat
+timestamps.txt
+summaries.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

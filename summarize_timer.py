@@ -21,6 +21,9 @@ def summarize():
                 interruptions += 1
                 total_time += (timestamp - start_time)
     
-    print(f"{interruptions} interruptions. {total_time.seconds // 60} minutes {total_time.seconds % 60} seconds off task")
+    summary_text = f"{interruptions} interruptions. {total_time.seconds // 60} minutes {total_time.seconds % 60} seconds off task"
+    
+    with open('summaries.txt', 'a') as f:
+        f.write(f"{datetime.now()}: {summary_text}\n")
 
     os.remove('timestamps.txt')
